@@ -20,7 +20,7 @@ GPPV.validate = METHOD(function(m) {
 			purchaseToken = params.purchaseToken;
 			
 			googleJWTRequest({
-				url : 'https://www.googleapis.com/androidpublisher/v2/applications/' + encodeURIComponent(NODE_CONFIG.GPPV.appPackageName) + '/purchases/subscriptions/' + encodeURIComponent(productId) + '/tokens/' + encodeURIComponent(purchaseToken),
+				url : 'https://www.googleapis.com/androidpublisher/v2/applications/' + encodeURIComponent(NODE_CONFIG.GPPV.appPackageName) + '/purchases/products/' + encodeURIComponent(productId) + '/tokens/' + encodeURIComponent(purchaseToken),
 				jwt : {
 					email : NODE_CONFIG.GPPV.clientEmail,
 					key : NODE_CONFIG.GPPV.privateKey,
@@ -40,7 +40,7 @@ GPPV.validate = METHOD(function(m) {
 					
 					if (data.error !== undefined) {
 						callback(false);
-					} else if (data.expiryTimeMillis !== undefined && data.startTimeMillis !== undefined) {
+					} else if (data.purchaseTimeMillis !== undefined) {
 						callback(true);
 					} else {
 						callback(false);
