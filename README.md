@@ -35,5 +35,3 @@ GPPV.validate('{{token}}', function(isValid) {
 
 ## 작성자
 [Young Jae Sim](https://github.com/Hanul)
-
-왜 구글은 굳이 이런걸 만들도록 하는 것일까? 안타까울 따름이다.
