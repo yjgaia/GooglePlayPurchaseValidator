@@ -33,7 +33,7 @@ GPPV.validate = METHOD(function(m) {
 				data;
 				
 				if (error !== TO_DELETE) {
-					callback(false);
+					SHOW_ERROR('[GPPV] Error!', error);
 				} else {
 					
 					data = PARSE_STR(json);
