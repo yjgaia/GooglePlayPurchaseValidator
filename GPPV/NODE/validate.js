@@ -90,7 +90,15 @@ GPPV.validate = METHOD(function(m) {
 						// data
 						data = PARSE_STR(json);
 						
-						if (callback !== undefined) {
+						if (data === undefined) {
+							if (errorHandler !== undefined) {
+								errorHandler();
+							} else {
+								SHOW_ERROR('[GPPV] Error! Data:', json);
+							}
+						}
+						
+						else if (callback !== undefined) {
 							
 							if (data.error !== undefined) {
 								callback(false);

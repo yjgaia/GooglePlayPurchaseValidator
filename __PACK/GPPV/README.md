@@ -1,5 +1,3 @@
-*GooglePlayPurchaseValidator가 [UIAP](https://github.com/Hanul/UIAP)로 통합되었습니다.*
-
 # GooglePlayPurchaseValidator
 구글 플레이 결제 검증 BOX
 
